@@ -55,24 +55,27 @@ export default function App() {
   };
 
   return (
-    <View>
+    <View style={styles.container}>
       <TextInput
         placeholder="Nhập a"
         keyboardType="numeric"
         value={a}
         onChangeText={setA}
+        style={styles.input}
       />
       <TextInput
         placeholder="Nhập b"
         keyboardType="numeric"
         value={b}
         onChangeText={setB}
+        style={styles.input}
       />
       <TextInput
         placeholder="Nhập c"
         keyboardType="numeric"
         value={c}
         onChangeText={setC}
+        style={styles.input}
       />
       <Button title="Giải phương trình" onPress={handleSolve} />
       {result && <Text>Kết quả: {result}</Text>}
@@ -96,7 +99,7 @@ const styles = StyleSheet.create({
   },
   input: {
     borderWidth: 1,
-    borderColor: "#CCCCCC", // Màu đường viền nhạt
+    borderColor: "black", // Màu đường viền nhạt
     padding: 10,
     marginVertical: 10,
     borderRadius: 5,
